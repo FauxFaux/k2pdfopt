@@ -23,7 +23,7 @@
 /*
 ** v2.32:  Added new device dims from screen shots on mobileread.com
 */
-static DEVPROFILE devprof[17] =
+static DEVPROFILE devprof[19] =
     {
     {"Kindle 1-5","k2",560,735,167,0,1,{0,0,3,4}},
     {"Kindle DX","dx",800,1180,167,0,1,{0,0,0,0}},
@@ -53,7 +53,11 @@ static DEVPROFILE devprof[17] =
     {"Kobo Mini","kbm",600,730,200,0,1,{0,0,3,4}},
     {"Kobo Aura","kba",758,932,211,0,1,{0,0,3,4}},
     {"Kobo Aura HD","kbhd",1080,1320,250,0,1,{0,0,3,4}},
-    {"Kobo H2O","kbh2o",1080,1310,265,0,1,{0,0,3,4}},
+    {"Kobo H2O","kbh2o",1080,1309,265,0,1,{0,0,3,4}},
+    {"Kobo H2O Full Screen","kbh2ofs",1080,1429,265,0,1,{0,0,3,4}},
+    /* Nexus 7 */
+    /* http://www.mobileread.com/forums/showthread.php?p=3181143#post3181143 */
+    {"Nexus 7","nex7",1187,1811,323,1,1,{0,0,3,4}},
     {"","",0,0,167,0,1,{0,0,0,0}}
     };
 
@@ -110,11 +114,19 @@ DEVPROFILE *devprofile_get(char *name)
     int i,i0,c;
 
     for (i0=i=c=0;devprof[i].width>0;i++)
+        {
+        if (!stricmp(devprof[i].name,name) || !stricmp(devprof[i].alias,name))
+            {
+            c=1;
+            i0=i;
+            break;
+            }
         if (in_string(devprof[i].name,name)>=0 || in_string(devprof[i].alias,name)>=0)
             {
             c++;
             i0=i;
             }
+        }
     if (c==1)
         return(&devprof[i0]);
     return(NULL);
