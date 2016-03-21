@@ -1,4 +1,4 @@
-char *k2pdfopt_version = "v2.34b";
+char *k2pdfopt_version = "v2.34";
 /*
 ** k2version.c  K2pdfopt version number and history.
 **
@@ -18,20 +18,6 @@ char *k2pdfopt_version = "v2.34b";
 ** along with this program.  If not, see <http://www.gnu.org/licenses/>.
 **
 ** VERSION HISTORY
-**
-** V2.34b 21 MAR 2016
-**           MS WINDOWS BUG FIXES
-**           - Native conversions correctly generate unicode file names
-**             http://www.mobileread.com/forums/showthread.php?p=3284264#post3284264
-**           - GUI correctly provides right-click help on the output folder widgets
-**
-** V2.34a 19 MAR 2016
-**           BUG FIX
-**           - Device "Kobo H2O" can now be correctly assigned. (E-mail 3-17-16)
-**           MS WINDOWS GUI BUG FIX
-**           - Fixed "Additional Options" and "Command-line Options" read-only issue.
-**           - Fixed file list box overlapping the output folder box.
-**           - Fixed "Add File" selection of .pdf and .djvu files.
 **
 ** V2.34 18 MAR 2016
 **           ENHANCEMENTS
