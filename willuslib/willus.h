@@ -241,7 +241,7 @@ typedef double  real;
 #define HAVE_JPEG_LIB
 #endif
 #ifndef HAVE_MUPDF_LIB
-#define HAVE_MUPDF_LIB
+//#define HAVE_MUPDF_LIB
 #endif
 #ifndef HAVE_GHOSTSCRIPT
 #define HAVE_GHOSTSCRIPT
@@ -250,13 +250,13 @@ typedef double  real;
 #define HAVE_DJVU_LIB
 #endif
 #ifndef HAVE_GOCR_LIB
-#define HAVE_GOCR_LIB
+//#define HAVE_GOCR_LIB
 #endif
 #ifndef HAVE_LEPTONICA_LIB
 #define HAVE_LEPTONICA_LIB
 #endif
 #ifndef HAVE_TESSERACT_LIB
-#define HAVE_TESSERACT_LIB
+//#define HAVE_TESSERACT_LIB
 #endif
 /*
 ** Defines for presence of Jasper and GSL (Gnu Scientific Library).

@@ -10,17 +10,18 @@ jpeg = cc.find_library('jpeg')
 dependencies = [
     math,
     dependency('threads'),
-
-    jbig2dec,
     jpeg,
 
     dependency('freetype2'),
     dependency('harfbuzz'),
     dependency('ddjvuapi'),
-    dependency('mupdf'),
+    dependency('lept'),
     dependency('libpng'),
-    dependency('libopenjp2'),
     dependency('zlib'),
+
+    #dependency('mupdf'),
+    #dependency('libopenjp2'),
+    #jbig2dec,
 ]
 
 lib_includes = include_directories(
@@ -30,6 +31,7 @@ lib_includes = include_directories(
 
 all_sources = [
     'k2pdfopt.c',
+    'leptonica_mod/dewarp2.c',
     'k2pdfoptlib/bmpregion.c',
     'k2pdfoptlib/devprofile.c',
     'k2pdfoptlib/k2bmp.c',
@@ -72,8 +74,8 @@ all_sources = [
     'willuslib/math.c',
     'willuslib/mem.c',
     'willuslib/ocr.c',
-#        'willuslib/ocrgocr.c',
-#        'willuslib/ocrtess.c',
+#    'willuslib/ocrgocr.c',
+#    'willuslib/ocrtess.c',
     'willuslib/pdfwrite.c',
     'willuslib/point2d.c',
     'willuslib/render.c',

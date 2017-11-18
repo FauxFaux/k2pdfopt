@@ -55,7 +55,7 @@
  */
 
 #include <math.h>
-#include "allheaders.h"
+#include <leptonica/allheaders.h>
 
 static PTA *dewarpGetMeanVerticals(PIX *pixs, l_int32 x, l_int32 y);
 static l_int32 dewarpGetLineEndpoints(l_int32 h, PTAA *ptaa, PTA **pptal,
