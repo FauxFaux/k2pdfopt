@@ -24,7 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <leptonica.h>
+#include <leptonica/allheaders.h>
 #include <tesseract.h>
 #include "willus.h"
 

@@ -21,7 +21,7 @@
 */
 #include <stdio.h>
 #include "willus.h"
-#include <leptonica.h>
+#include <leptonica/allheaders.h>
 
 static void wlept_pix_from_bmp(PIX **pixptr,WILLUSBITMAP *bmp);
 static void wlept_bmp_from_pix(WILLUSBITMAP *bmp,PIX *pix);
